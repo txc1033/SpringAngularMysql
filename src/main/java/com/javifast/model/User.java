@@ -18,22 +18,24 @@ public class User extends ParentEntity{
 	
 	@Column(name = "last_name", nullable=false, length=50)
     private String lastName;
-	
-	public String getNombre() {
+
+	public String getFirstName() {
 		return firstName;
 	}
-	
-	public void setNombre(String nombre) {
-		this.firstName = nombre;
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
-	
-	public String getApellido() {
+
+	public String getLastName() {
 		return lastName;
 	}
-	
-	public void setApellido(String apellido) {
-		this.lastName = apellido;
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
+	
+	
 	
     
 }
