@@ -1,6 +1,7 @@
 package com.javifast.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +39,13 @@ public class UserController {
 		}
 		this.userService.save(user);
 		return new RestResponse(HttpStatus.CREATED.value(), "Operacion Exitosa");
+	}
+	
+	@RequestMapping(value="/getUsers", method = RequestMethod.GET)
+	public List<User> getUsers() {
+		this.userService.findAll();
+		return this.userService.findAll();
+		
 	}
 	
 	private boolean validate(User user) {
